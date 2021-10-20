@@ -1,0 +1,435 @@
+/* Estilização da página */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: rgb (0, 0, 0);
+    text-decoration: none;
+    font: bold;
+    padding: 5px
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    background: rgba(23, 23, 23, 255);
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 5px 0;
+    display: inline-block;
+    margin: 10px 15px;
+    color: rgba(240, 145, 53, 255);
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    transition: .25s ease-in-out;
+}
+
+nav ul li a:hover {
+    border-bottom: 3px solid rgba(240, 145, 53, 255);
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    transition: background-color 1s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section h1 {
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+}
+
+section:nth-of-type(1) {
+    background-color: rgba(225, 118, 20, 255);
+}
+
+section:nth-of-type(2) {
+    background-color: rgba(240, 145, 53, 255);
+}
+
+section:nth-of-type(3) {
+    background-color: rgba(221, 221, 187, 255);
+}
+
+section:nth-of-type(4) {
+    background-color: rgba(254, 254, 254, 255);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 17%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+svg {
+    width: 100%;
+}
+
+/* Section 1 - Content */
+
+#header {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#header1 {
+    font-size: 20px;
+    margin-top: 5%;
+}
+
+/* Section 2 - Content */
+
+#transformer-part1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content1 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.p1 {
+    margin-bottom: 9%;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#first-box {
+    border: 2px solid rgba(221, 221, 187, 255);
+    box-shadow: 0 0 5px rgba(221, 221, 187, 255);
+    width: auto;
+}
+
+/* Seção 3 - Content */
+
+#content2 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#second-box {
+    border: 2px solid rgba(240, 145, 53, 255);
+    box-shadow: 0 0 5px rgba(240, 145, 53, 255);
+    width: auto;
+}
+
+/* Seção 4 - Content */
+
+#foot {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#foot1 {
+    margin-top: 5%;
+}
+
+#links {
+    margin-top: 5%;
+}
+
+/* Transformações animadas no svg */
+
+                                                                                        /* Cabeça */
+
+.head {
+    animation: head-recoil 10s infinite alternate ease-in-out;
+}
+
+@keyframes head-recoil {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 51px);
+    }
+}
+
+                                                                            /* Cintura */
+
+.body {
+    animation: waist-recoil 10s infinite alternate ease-in-out;
+}
+
+@keyframes waist-recoil {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    20% {
+        transform: translate(0, 0)
+    }
+
+    100% {
+        transform: translate(0, -10px);
+    }
+}
+
+                                            /* Braço esquerdo */
+
+.right-rear-view {
+    animation: rightShoulderRotate 10s infinite alternate ease-in-out;
+}
+
+@keyframes rightShoulderRotate {
+    0% {
+        transform-origin: 369px 191px;
+        transform: rotate(-20deg);
+    }
+
+    20% {
+        transform-origin: 369px 191px;
+        transform: rotate(-20deg);
+    }
+
+    40% {
+        transform-origin: 369px 191px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform-origin: 369px 191px;
+        transform: rotate(0deg);
+    }
+
+}
+
+.right-arm {
+    animation: rightArmRotate 10s infinite alternate ease-in-out;
+}
+
+@keyframes rightArmRotate {
+    0% {
+        transform-origin: 406px 191px;
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform-origin: 406px 191px;
+        transform: rotate(0deg);
+    }
+
+    60% {
+        transform-origin: 406px 191px;
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform-origin: 406px 191px;
+        transform: rotate(-90deg);
+    }
+}
+
+.right-shoulder {
+    animation: rightShoulderRecoil 10s infinite alternate ease-in-out;
+}
+
+@keyframes rightShoulderRecoil {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    70% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0px, -66px);
+    }
+}
+
+.right-forearm {
+    animation: rightForearmRecoil 10s infinite alternate ease-in-out;
+}
+
+@keyframes rightForearmRecoil {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    70% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0px, -148px);
+    }
+}
+
+                                            /* Braço direito */
+
+.left-rear-view {
+    animation: leftShoulderRotate 10s infinite alternate ease-in-out;
+}
+
+@keyframes leftShoulderRotate {
+    0% {
+        transform-origin: 231px 191px;
+        transform: rotate(20deg);
+    }
+
+    20% {
+        transform-origin: 231px 191px;
+        transform: rotate(20deg);
+    }
+
+    40% {
+        transform-origin: 231px 191px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform-origin: 231px 191px;
+        transform: rotate(0deg);
+    }
+
+}
+
+.left-arm {
+    animation: leftArmRotate 10s infinite alternate ease-in-out;
+}
+
+@keyframes leftArmRotate {
+    0% {
+        transform-origin: 194px 191px;
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform-origin: 194px 191px;
+        transform: rotate(0deg);
+    }
+
+    60% {
+        transform-origin: 194px 191px;
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform-origin: 194px 191px;
+        transform: rotate(90deg);
+    }
+}
+
+.left-shoulder {
+    animation: leftShoulderRecoil 10s infinite alternate ease-in-out;
+}
+
+@keyframes leftShoulderRecoil {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    70% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0px, -66px);
+    }
+}
+
+.left-forearm {
+    animation: leftForearmRecoil 10s infinite alternate ease-in-out;
+}
+
+@keyframes leftForearmRecoil {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    70% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0px, -148px);
+    }
+}
+
+                                                /* Asas */
+
+.left-wing {
+    animation: leftWingMove 10s infinite alternate ease-in-out;
+}
+
+@keyframes leftWingMove {
+    0% {
+        transform-origin: 275px 205px;
+        transform: rotate(-100deg) translate(0px, 0px);
+    }
+
+    20% {
+        transform-origin: 275px 205px;
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+
+    100% {
+        transform-origin: 275px 205px;
+        transform: rotate(0deg) translate(740px, 100px);
+    }
+}
+
+.right-wing {
+    animation: rightWingMove 10s infinite alternate ease-in-out;
+}
+
+@keyframes rightWingMove {
+    0% {
+        transform-origin: 325px 205px;
+        transform: rotate(100deg) translate(0px, 0px);
+    }
+
+    20% {
+        transform-origin: 325px 205px;
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+
+    100% {
+        transform-origin: 325px 205px;
+        transform: rotate(0deg) translate(500px, 100px);
+    }
+}
+
+                                                                /* Transformações na second-box */
+
+#newrobot {
+    transform: translate(-60px, 300px);
+}
